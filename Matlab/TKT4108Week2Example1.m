@@ -47,7 +47,7 @@ ylim([-1 1])
 tp = linspace(-40,40,1000);
 X_Fourier = ones(1,length(tp))*a0;
 for k = 1:Nterms
-    X_Fourier = X_Fourier + 2*(ak(1,1)*cos(2*pi*k/t(end)*tp) + bk(1,k)*sin(2*pi*k/t(end)*tp));
+    X_Fourier = X_Fourier + 2*(ak(1,k)*cos(2*pi*k/t(end)*tp) + bk(1,k)*sin(2*pi*k/t(end)*tp));
 end
 figure(1)
 plot(tp,X_Fourier,'DisplayName',[num2str(Nterms) 'Terms'])
