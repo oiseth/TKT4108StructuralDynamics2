@@ -1,15 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Aug  8 21:43:54 2021
 
-@author: oiseth
 """
 
-#%% import necessary modules and packages
+#%% Import necessary modules and packages
 import numpy as np
 from matplotlib import pyplot as plt
 
-#%% Time series plot
+#%% Create time series
 plt.close('all')
 
 omega=1
@@ -32,13 +30,10 @@ plt.title('Sine wave')
 
 plt.figure()
 plt.hist(x,20,None,True,None,False,None)
-
-x_axis=np.linspace(-x0,x0,100)
-plt.plot(x_axis,1/(np.pi*np.sqrt(x0**2-x_axis**2)))
 plt.show()
-plt.title('Histogram of x')
+plt.title('Histogram of x (normalized)')
 
-#%% Plot histogram and theoretical distribution
+#%% Summation of multiple
 
 N=10
 
@@ -59,7 +54,7 @@ plt.title('Sum of sine waves')
 # Plot histogram
 plt.figure()
 plt.hist(x,20,None,True,None,False,None)
-plt.title('Histogram of x')
+plt.title('Histogram of x (normalized)')
 
 
 

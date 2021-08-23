@@ -32,8 +32,8 @@ def loadspectrum(load_type):
         omega_cutoff_low=0
         omega_cutoff_high=80
     elif load_type=='b':
-        omega_cutoff_low=10
-        omega_cutoff_high=40
+        omega_cutoff_low=15
+        omega_cutoff_high=35
     
     # Uniform band limited white noise
     if load_type=='a' or load_type=='b':
@@ -44,7 +44,7 @@ def loadspectrum(load_type):
             
             Spp[k,:,:]=np.diag([S0,S0,S0])
     
-
+    
     # Narrow banded load, bell shape from Guassian distribution
     if load_type=='c':
         
@@ -57,5 +57,4 @@ def loadspectrum(load_type):
             Spp[k,:,:]=np.diag([S0,S0,S0])
     
         
-    
     return omega, Spp

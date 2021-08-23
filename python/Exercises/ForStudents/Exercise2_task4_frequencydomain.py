@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Aug  8 21:43:54 2021
 
-@author: oiseth
 """
 
-#%% import necessary modules and packages
+#%% Import necessary modules and packages
 import numpy as np
 from matplotlib import pyplot as plt
 import time_integration as ti
@@ -15,7 +13,6 @@ import time_simulation as ts
 
 plt.close('all')
 
-x0=1
 dt=0.01
 T=100
 omega_1=3
@@ -33,7 +30,7 @@ plt.plot(t,x)
 plt.xlabel('t')
 plt.ylabel('x(t)')
 plt.grid()
-plt.title('Sum of sine waves')
+plt.title('Sum of two sine waves')
 
 #%% Frequency domain (DFT)
 

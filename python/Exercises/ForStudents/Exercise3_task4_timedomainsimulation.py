@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Aug  8 21:43:54 2021
 
-@author: oiseth
 """
 
-#%% import necessary modules and packages
+#%% Import necessary modules and packages
 import numpy as np
 from scipy import linalg
 from matplotlib import pyplot as plt
@@ -38,13 +36,13 @@ omega_n=np.sqrt(lambd)
 #%% Monte carlo simulation
 
 #Choose the desired load spectrum 
-load_type='a'
+#load_type='a'
 # load_type='b'
-# load_type='c'
+load_type='c'
 
 # Import the load spectrum
-import Exercise3_getloadspectrum
-(omega_load,Spp)=Exercise3_getloadspectrum.loadspectrum(load_type)
+import Exercise3_task4_loadspectrum
+(omega_load,Spp)=Exercise3_task4_loadspectrum.loadspectrum(load_type)
 
 Nsim=15
 
@@ -65,7 +63,7 @@ plt.grid()
 
 #%% Spectrum of load
 
-plt.close('all')
+#plt.close('all')
 
 (f,Gp)=ts.fft_function(p[0,:],dt)
 
@@ -82,34 +80,41 @@ plt.xlim(-25,25)
 
 #plt.yscale('log')
 
-
 #%% Solve system response by time integration
 
-plt.close('all')
+#plt.close('all')
 
 # Statistics
 std_u=np.zeros((3,Nsim))
-max_u=np.zeros((3,Nsim))
+max_uddot=np.zeros((3,Nsim))
 
 # Initial conditions
 u0=np.zeros((3,1))
 udot0=np.zeros((3,1))
+
+# Newmark parameters
 gamma=0.5
 beta=0.25
 
+# Empty matrices for the response
 U1=np.zeros((Nsim,len(t)))
 U2=np.zeros((Nsim,len(t)))
 U3=np.zeros((Nsim,len(t)))
 
-# Solve
+# Solve response
 for k in np.arange(0,Nsim):
     
+    print('Solving simulation ' + str(k+1))
+    
+    # Time integration
     f=P[k]
     (u,udot,uddot)=ti.linear_newmark_krenk(M,C,K,f,u0,udot0,dt,gamma,beta)
    
+    # Statistics
     std_u[:,k]=np.std(u,1)
-    max_u[:,k]=np.max(u,1)
+    max_uddot[:,k]=np.max(uddot,1)
     
+    # Save response time series for each simulation
     U1[k,]=u[0,:]
     U2[k,]=u[1,:]
     U3[k,]=u[2,:]
@@ -120,63 +125,61 @@ plt.figure()
 plt.plot(t,u[0,:])
 plt.plot(t,u[1,:])
 plt.plot(t,u[2,:])
-
 plt.show()
 plt.xlabel('Time [s]')
 plt.ylabel('Response [m]')
 plt.grid()
 
+#%% Statistics
+
+plt.figure()
+plt.plot(std_u[0,:],'o')
+plt.plot(std_u[1,:],'x')
+plt.plot(std_u[2,:],'d')
+plt.show()
+plt.xlabel('Simulation')
+plt.ylabel('SD [m]')
+plt.grid()
+
+plt.figure()
+plt.plot(max_uddot[0,:],'o')
+plt.plot(max_uddot[1,:],'x')
+plt.plot(max_uddot[2,:],'d')
+plt.show()
+plt.xlabel('Simulation')
+plt.ylabel('Max acc. [m/s^2]')
+plt.grid()
+
+
 #%% Spectrum
 
-plt.close('all')
+#plt.close('all')
 
+# Find DFT
 (f,GU1)=ts.fft_function(U1,dt,1)
 (f,GU2)=ts.fft_function(U2,dt,1)
+(f,GU3)=ts.fft_function(U3,dt,1)
 
+# Find spectrum of each simulation
 S_U1=np.real( np.multiply(GU1,np.conj(GU1))*T )
 S_U2=np.real( np.multiply(GU2,np.conj(GU2))*T )
+S_U3=np.real( np.multiply(GU3,np.conj(GU3))*T )
 
+# Average the spectrum 
 S_U1_avg=np.mean(S_U1,0)
 S_U2_avg=np.mean(S_U2,0)
+S_U3_avg=np.mean(S_U3,0)
 
 plt.figure()
 plt.plot(f,S_U1_avg)
 plt.plot(f,S_U2_avg)
+plt.plot(f,S_U3_avg)
 plt.show()
 plt.xlabel('f [Hz]')
 plt.ylabel('S(omega) [m^2/Hz]')
 plt.grid()
 plt.title('PSD of response')
 plt.xlim(-10,10)
-
-#plt.yscale('log')
-
-H=np.zeros(np.shape(Spp), dtype=complex)
-Suu=np.zeros(np.shape(Spp))
-
-for k in np.arange(0,len(omega_load)):
-    
-    H[k,:,:]=np.linalg.inv(-omega_load[k]**2*M+complex(0,1)*omega_load[k]*C+K)
-    
-    Suu[k,:,:]=np.real( 
-                np.matmul(
-                np.matmul(H[k,:,:],Spp[k,:,:]),
-                np.conj(np.transpose(H[k,:,:])) ) )
-    
-
-plt.figure()
-plt.plot(f,S_U1_avg)
-plt.plot(omega_load/(2*np.pi),Suu[:,0,0]*(2*np.pi)*0.5) # times 0.5 to scale from onesided to twosided
-plt.show()
-plt.xlabel('f [Hz]')
-plt.ylabel('S(omega) [m^2/Hz]')
-plt.title('Comparison simulation and analytical')
 plt.yscale('log')
-ax=plt.gca()
-ax.autoscale(enable=True, axis='both', tight=True)
-plt.show()
-
-sigma_pred=np.trapz(Suu[:,0,0],omega_load)**0.5
-sigma_sim=np.mean(std_u[0,:])
 
 
