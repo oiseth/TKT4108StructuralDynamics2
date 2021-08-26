@@ -118,6 +118,28 @@ axs[1].set_xlabel('$y_1$')
 axs[1].set_title('Response')
 axs[1].grid(True)
 
+#%%
+fig, axs = plt.subplots(2,1)
+axs[0].plot(t, X[0,:])
+axs[0].set_ylabel('$X_1$')
+axs[0].set_title('Loads')
+axs[0].set_xlim((10,15))
+axs[0].grid(True)
+axs[0]
+
+axs[1].plot(t, X[1,:])
+axs[1].set_ylabel('$X_2$')
+axs[1].set_xlabel('$t$')
+axs[1].set_xlim((10,15))
+axs[1].grid(True)
+
+
+plt.figure()
+plt.scatter(X[0,:],X[1,:])
+plt.grid()
+plt.xlabel(r'$X_1$')
+plt.ylabel(r'$X_2$')
+
 
 
 
