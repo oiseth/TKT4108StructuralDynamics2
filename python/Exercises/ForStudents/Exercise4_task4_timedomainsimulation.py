@@ -25,7 +25,7 @@ m=20e3
 M=np.diag([1.2*m,m])
 K=np.array([ [2.2,-1.2] , [-1.2, 1.2] ])*k
 
-C=0.16*M+8e-4*K
+C=0.1155*M+0.0024*K
 
 (lambd,phi)=linalg.eigh(K,M)
 
@@ -37,14 +37,14 @@ omega_n=np.sqrt(lambd)
 
 # Frequency axis for load
 d_omega=.1
-omega_load=np.arange(0,130+d_omega,d_omega)
+omega_load=np.arange(0,80+d_omega,d_omega)
 
 # Spectrum for load
 Spp=np.zeros((len(omega_load),2,2))
 for k in np.arange(0,len(omega_load)):
             
-    S_p1p1=1e4*(np.exp(-(omega_load[k]+1)**0.5+1e-3))
-    S_p2p2=S_p1p1
+    S_p2p2=1e4*(np.exp(-(omega_load[k]+1)**0.5)+1e-3)
+    S_p1p1=S_p2p2*np.exp(-0.8)
     Co=0.5*(1-1/(1+np.exp(-0.1*(omega_load[k]-15))))
     S_p1p2=np.sqrt(S_p1p1*S_p2p2*Co)
     
