@@ -29,40 +29,37 @@ plt.title(r'$\rho=' + str(rho12) + '$')
 
 #%% Define auto-correlation function
 dt = 0.2
-t = np.array([np.arange(0.,100.,dt)]) # Time vector
+t = np.arange(0.,100.,dt) # Time vector
 tau = t-np.max(t)/2
-omega_c = 5; # Cut-off frequency
-sigma = 1.
+omega_c = 1.0; # Cut-off frequency
+sigma = 1.0
 R = sigma**2/(omega_c*tau)*np.sin(omega_c*tau); # Auto-correlation function
 plt.figure()
 plt.show()
-plt.plot(tau[0,:],R[0,:])
+plt.plot(tau,R)
 plt.ylim(-sigma,sigma)
 plt.grid()
 plt.ylabel(r'$R(\tau)$')
 plt.xlabel(r'$\tau$')
 #%% Use auto-correlation function to generate stochastic time series
-tau_mat = np.abs(t-t.T) # Matrix of all possible time lags
+tau_mat = np.abs(np.array([t])-np.array([t]).T) # Matrix of all possible time lags
 tau_mat[tau_mat==0] = np.finfo(float).eps # Avoid the singularity when \tau = 0
-mean = np.zeros((t.shape[1])) 
+mean = np.zeros((t.shape[0])) 
 cov = sigma**2/(omega_c*tau_mat)*np.sin(omega_c*tau_mat); # Auto-correlation function
 X = np.random.multivariate_normal(mean,cov,3)
 
-fig, axs = plt.subplots(4,1)
-axs[0].plot(tau[0,:], R[0,:])
+fig, axs = plt.subplots(3,1)
+axs[0].plot(tau, R)
 axs[0].set_ylabel(r'$R(\tau)$')
+axs[0].set_xlabel(r'$\tau$')
 axs[0].set_ylim(-sigma,sigma)
 axs[0].grid(True)
 
-axs[1].plot(t[0,:], X[0,:])
+axs[1].plot(t, X[0,:])
 axs[1].set_ylabel(r'$X_1$')
 axs[1].grid(True)
 
-axs[2].plot(t[0,:], X[1,:])
+axs[2].plot(t, X[1,:])
 axs[2].set_ylabel(r'$X_1$')
 axs[2].grid(True)
-
-axs[3].plot(t[0,:], X[2,:])
-axs[3].set_ylabel(r'$X_1$')
-axs[3].grid(True)
 

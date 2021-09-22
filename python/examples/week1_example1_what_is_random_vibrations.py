@@ -8,9 +8,9 @@ Created on Sun Aug  8 15:08:26 2021
 import numpy as np
 from scipy.linalg import eig
 import sys
-sys.path.append('C:/Users/oiseth/Documents/GitHub/TKT4108StructuralDynamics2/python/modules')
-from time_integration import *
-from matplotlib import pyplot as plt
+sys.path.append('C:/Users/oiseth/Documents/GitHub/TKT4108StructuralDynamics2/python/modules') #Change the path to your directory
+from time_integration import * # Import all functions in the module time_integration
+from matplotlib import pyplot as plt 
 
 #%% Define structural properties
 m = 1.0 # Mass of each story
@@ -20,21 +20,21 @@ KK = np.array(([[2, -1], [-1, 1]]))*k # Stiffness matrix
 
 #%% Calculate modes and frequencies
 lam,v = eig(KK,MM) #Solve eigenvalue problem using scipy 
-lam = np.reshape(lam, (1, lam.shape[0]))
+#lam = np.reshape(lam, (1, lam.shape[0]))
 v[:,0] = v[:,0]/np.max(v[:,0]) #Normalize the eigenvector
 v[:,1] = v[:,1]/np.max(v[:,1])
 f = np.real(lam)**0.5/2/np.pi #Natural frequencies in Hz
 omega = f*2*np.pi # Natural frequencies in rad/s
-zeta = np.array(([[5.0, 5.0]]))/100
+zeta = np.array(([5.0, 5.0]))/100
 
 #%% Rayleigh damping
-alpha1 = 2*omega[0,0]*omega[0,1]*(zeta[0,1]*omega[0,0]-zeta[0,0]*omega[0,1])/(omega[0,0]**2-omega[0,1]**2)
-alpha2 = 2*(zeta[0,0]*omega[0,0]-zeta[0,1]*omega[0,1])/(omega[0,0]**2-omega[0,1]**2)
+alpha1 = 2*omega[0]*omega[1]*(zeta[1]*omega[0]-zeta[0]*omega[1])/(omega[0]**2-omega[1]**2)
+alpha2 = 2*(zeta[0]*omega[0]-zeta[1]*omega[1])/(omega[0]**2-omega[1]**2)
 CC = alpha1*MM + alpha2*KK
 
 #%% Determenistic dynamic response due to harmonic load 
 h = 0.05 #Time step
-t = np.array([np.arange(0.,100.,h)]) # Time vector
+t = np.arange(0.,100.,h) # Time vector
 fl = 2.0 # Load frequency
 po = 100.0 # Load amplitude
 u0 = np.array([[0.0], [0.0]]) #Initial displacement
@@ -46,23 +46,23 @@ y, ydot, y2dot = linear_newmark_krenk(MM,CC,KK,X,u0,udot0,h,gamma,beta)
 
 # Plot deterministic dynamic load and response
 fig, axs = plt.subplots(2,2)
-axs[0,0].plot(t[0,:], X[0,:])
+axs[0,0].plot(t, X[0,:])
 axs[0,0].set_ylabel('$X_1$')
 axs[0,0].set_title('Loads')
 axs[0,0].grid(True)
 
-axs[1,0].plot(t[0,:], X[1,:])
+axs[1,0].plot(t, X[1,:])
 axs[1,0].set_ylabel('$X_2$')
 axs[1,0].set_xlabel('$t$')
 axs[1,0].grid(True)
 
 
-axs[0,1].plot(t[0,:], y[0,:])
+axs[0,1].plot(t, y[0,:])
 axs[0,1].set_ylabel('$y_1$')
 axs[0,1].set_title('Responses')
 axs[0,1].grid(True)
 
-axs[1,1].plot(t[0,:], y[1,:])
+axs[1,1].plot(t, y[1,:])
 axs[1,1].set_ylabel('$y_2$')
 axs[1,1].set_xlabel('$t$')
 axs[1,1].grid(True)
@@ -76,41 +76,69 @@ covmX = np.array(([[stdX1**2, rho_X1_X2*stdX1*stdX2], [rho_X1_X2*stdX1*stdX2, st
 lam,v = eig(covmX) #Solve eigenvalue problem using scipy 
 covmX_modal = np.matmul(np.matmul(v.T,covmX),v) # Transform covariance matrix to uncorrelated space
 
-U = np.vstack((np.random.normal(0, covmX_modal[0,0]**0.5, t.shape[1]),np.random.normal(0, covmX_modal[1,1]**0.5, t.shape[1])))
+U = np.vstack((np.random.normal(0, covmX_modal[0,0]**0.5, t.shape[0]),np.random.normal(0, covmX_modal[1,1]**0.5, t.shape[0])))
 X = np.matmul(v,U) # Transform to correlated space
 
 y, ydot, y2dot = linear_newmark_krenk(MM,CC,KK,X,u0,udot0,h,gamma,beta)
 
 # Plot stochastic dynamic load and response
 fig, axs = plt.subplots(2,2)
-axs[0,0].plot(t[0,:], X[0,:])
+axs[0,0].plot(t, X[0,:])
 axs[0,0].set_ylabel('$X_1$')
 axs[0,0].set_title('Loads')
 axs[0,0].grid(True)
 
-axs[1,0].plot(t[0,:], X[1,:])
+axs[1,0].plot(t, X[1,:])
 axs[1,0].set_ylabel('$X_2$')
 axs[1,0].set_xlabel('$t$')
 axs[1,0].grid(True)
 
 
-axs[0,1].plot(t[0,:], y[0,:])
+axs[0,1].plot(t, y[0,:])
 axs[0,1].set_ylabel('$y_1$')
 axs[0,1].set_title('Responses')
 axs[0,1].grid(True)
 
-axs[1,1].plot(t[0,:], y[1,:])
+axs[1,1].plot(t, y[1,:])
 axs[1,1].set_ylabel('$y_2$')
 axs[1,1].set_xlabel('$t$')
 axs[1,1].grid(True)
 
 #%% Plot scatter plot of dynamic loads
+fig, axs = plt.subplots(1,2)
+axs[0].scatter(X[0,:],X[1,:])
+axs[0].set_ylabel('$X_2$')
+axs[0].set_xlabel('$X_1$')
+axs[0].set_title('Loads')
+axs[0].grid(True)
+
+axs[1].scatter(y[0,:],y[1,:])
+axs[1].set_ylabel('$y_2$')
+axs[1].set_xlabel('$y_1$')
+axs[1].set_title('Response')
+axs[1].grid(True)
+
+#%%
+fig, axs = plt.subplots(2,1)
+axs[0].plot(t, X[0,:])
+axs[0].set_ylabel('$X_1$')
+axs[0].set_title('Loads')
+axs[0].set_xlim((10,15))
+axs[0].grid(True)
+axs[0]
+
+axs[1].plot(t, X[1,:])
+axs[1].set_ylabel('$X_2$')
+axs[1].set_xlabel('$t$')
+axs[1].set_xlim((10,15))
+axs[1].grid(True)
+
+
 plt.figure()
-plt.show()
 plt.scatter(X[0,:],X[1,:])
-plt.xlabel('$X_1$')
-plt.ylabel('$X_2$')
 plt.grid()
+plt.xlabel(r'$X_1$')
+plt.ylabel(r'$X_2$')
 
 
 
