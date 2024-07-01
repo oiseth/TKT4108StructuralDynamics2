@@ -1,3 +1,8 @@
+
+# Other
+dist/
+develop/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
