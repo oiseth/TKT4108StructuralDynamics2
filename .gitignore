@@ -2,6 +2,7 @@
 # Other
 dist/
 develop/
+*old*/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
