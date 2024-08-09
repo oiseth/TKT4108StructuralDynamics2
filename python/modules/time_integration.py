@@ -1,6 +1,6 @@
 import numpy as np
 
-def linear_newmark_krenk(M,C,K,f,u0,udot0,h,gamma,beta):
+def linear_newmark_krenk(M,C,K,f,u0,udot0,h,gamma=0.5,beta=0.25):
     """
     Return the solution of a system of second order differential equations obtained by Newmarks beta method  
     
@@ -38,8 +38,58 @@ def linear_newmark_krenk(M,C,K,f,u0,udot0,h,gamma,beta):
     Reference: 
     Krenk, S. (2009). Non-linear modeling and analysis of solids and structures. Cambridge University Press.   
         
+    gamma=0.5 and beta=0.25 set as default values
+    This leads to the "average constant acceleration" integration shceme, which is unconditionally stable
+    for all time steps. However, a time step (h) lower than T/20 is recommended, where T is the period
+    of the highest natural frequency.
+        
+        
     """
     
+    # If one dimensional, convert to matrix
+    f=np.atleast_2d(f)
+        
+    # If scalar, convert to matrix
+    M=np.atleast_2d(M)
+    C=np.atleast_2d(C)
+    K=np.atleast_2d(K)   
+    
+    u0=np.atleast_2d(u0)
+    udot0=np.atleast_2d(udot0)
+    
+    # Check dimensions
+    do_err=False
+
+    if M.shape[0] != C.shape[0]:
+        print('Mass and damping matrix not same size')
+        do_err=True
+        
+    if M.shape[0] != K.shape[0]:
+        print('Mass and stiffness matrix not same size')
+        do_err=True
+        
+    if M.shape[0] != u0.shape[0]:
+        print('Mass matrix and initial displacment not same size')
+        do_err=True
+        
+    elif M.shape[0] != udot0.shape[0]:
+        print('Mass matrix and initial velocity not same size')
+        do_err=True
+        
+    elif M.shape[0] != f.shape[0]:
+        print('Mass matrix and force not same size')
+        do_err=True
+        
+    if do_err==True:
+        print('Mass matrix dimension is ' + str(M.shape[0]))
+        print('Damping matrix dimension is ' + str(C.shape[0]))
+        print('Stiffness matrix dimension is ' + str(K.shape[0]))
+        print('Initial displacment dimension is ' + str(u0.shape[0]))     
+        print('Initial velocity dimension is ' + str(udot0.shape[0]))     
+        print('Force dimension is ' + str(f.shape[0]))     
+        raise Exception('Dimension error')
+
+
     # Initialize variables
     u = np.zeros((M.shape[0],f.shape[1]))
     
