@@ -89,7 +89,7 @@ def linear_newmark_krenk(M,C,K,f,u0,udot0,h,gamma=0.5,beta=0.25):
         print('Force dimension is ' + str(f.shape[0]))     
         raise Exception('Dimension error')
 
-
+    
     # Initialize variables
     u = np.zeros((M.shape[0],f.shape[1]))
     
