@@ -7,7 +7,7 @@
    viewBox="0 0 150 70"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    sodipodi:docname="mass with tmd.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,11 +24,11 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.5554293"
-     inkscape:cx="298.63138"
-     inkscape:cy="196.08734"
-     inkscape:window-width="3840"
-     inkscape:window-height="1537"
+     inkscape:zoom="2"
+     inkscape:cx="347.25"
+     inkscape:cy="62.75"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -42,6 +42,12 @@
   </sodipodi:namedview>
   <defs
      id="defs2">
+    <rect
+       x="359.05512"
+       y="-56.692913"
+       width="132.28346"
+       height="56.692913"
+       id="rect13890" />
     <marker
        style="overflow:visible;"
        id="Arrow1Lend"
@@ -819,7 +825,7 @@
                sodipodi:nodetypes="cc" />
             <g
                inkscape:label=""
-               transform="matrix(2.85741,0,0,2.85741,-550.59785,-231.38807)"
+               transform="matrix(2.85741,0,0,2.85741,-616.37191,-296.40611)"
                id="g5602">
               <g
                  id="g3513">
@@ -849,7 +855,7 @@
             </g>
             <g
                inkscape:label=""
-               transform="matrix(2.85741,0,0,2.85741,-614.27301,-298.94957)"
+               transform="matrix(2.85741,0,0,2.85741,-556.81521,-229.01738)"
                id="g6029">
               <g
                  id="g352">
@@ -907,6 +913,11 @@
                 </g>
               </g>
             </g>
+            <text
+               xml:space="preserve"
+               transform="matrix(0.75602366,0,0,0.75602366,-10.471102,-69.531813)"
+               id="text13888"
+               style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;white-space:pre;shape-inside:url(#rect13890)" />
           </g>
         </g>
       </g>
