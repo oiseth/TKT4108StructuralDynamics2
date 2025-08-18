@@ -8,7 +8,7 @@ This repository contains Python code for examples and exercises in TKT4108 Struc
 
 The weekly exercises and solutions can be found here:
 
-[Exercise 1](https://nbviewer.org/github/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise1/problem_set_1.ipynb) [Exercise 1 solution](to come)
+[Exercise 1](https://nbviewer.org/github/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise1/problem_set_1.ipynb)
 
 
 
