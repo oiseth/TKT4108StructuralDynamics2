@@ -3,6 +3,7 @@
 dist/
 develop/
 *old*/
+*.autosave*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
