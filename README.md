@@ -13,6 +13,8 @@ The weekly [exercises and solutions ](https://github.com/oiseth/TKT4108Structura
 
 [Exercise 2](https://nbviewer.org/github/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise2/problem_set_2.ipynb) - deadline sept 5th
 
+[Exercise 3](https://nbviewer.org/github/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise3/problem_set_3.ipynb) - deadline sept 12th
+
 
 ## Python examples
 
