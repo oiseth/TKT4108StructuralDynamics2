@@ -31,6 +31,8 @@ The weekly [exercises and solutions ](https://github.com/oiseth/TKT4108Structura
 
 [Exercise 8](https://nbviewer.org/github/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise8/problem_set_8.ipynb) - deadline oct 24th
 
+[Exercise 9](https://nbviewer.org/github/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise9/problem_set_9.ipynb) - deadline oct 31st
+
 ## Python examples
 
 Examples that are covered in lectures (and a few more) are found here: [Examples](https://github.com/oiseth/TKT4108StructuralDynamics2/tree/main/python/jupyterNotebooks)
