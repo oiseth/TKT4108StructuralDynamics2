@@ -23,13 +23,13 @@ The weekly [exercises and solutions ](https://github.com/oiseth/TKT4108Structura
 [Exercise 5](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise5/problem_set_5.ipynb) -  deadline sept 26th
 [Solution](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise5/solution_problem_set_5.ipynb) 
 
-[Exercise 6](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise6/problem_set_6.ipynb) -  - deadline oct 3rd
+[Exercise 6](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise6/problem_set_6.ipynb) - deadline oct 3rd
 [Solution](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise6/solution_problem_set_6.ipynb) 
 
-[Exercise 7](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise7/problem_set_7.ipynb) -  - deadline oct 10th
+[Exercise 7](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise7/problem_set_7.ipynb) - deadline oct 10th
 [Solution](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise7/solution_problem_set_7.ipynb) 
 
-[Exercise 8](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise8/problem_set_8.ipynb) -  - deadline oct 24th
+[Exercise 8](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise8/problem_set_8.ipynb) - deadline oct 24th
 [Solution](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise8/solution_problem_set_8.ipynb) 
 
 [Exercise 9](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise9/problem_set_9.ipynb) - deadline oct 31st
