@@ -43,7 +43,6 @@ def linear_newmark_krenk(M,C,K,f,u0,udot0,h,gamma=0.5,beta=0.25):
     for all time steps. However, a time step (h) lower than T/20 is recommended, where T is the period
     of the highest natural frequency.
         
-        
     """
     
     # If one dimensional, convert to matrix
