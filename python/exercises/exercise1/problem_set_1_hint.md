@@ -35,7 +35,7 @@ $$
 
 <details>
 <summary><strong>2c</strong></summary>
-     $17.90\,\mathrm{rad/s}$
+ $17.90\,\mathrm{rad/s}$
 </details>
 
 <details>
