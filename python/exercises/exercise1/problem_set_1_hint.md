@@ -20,7 +20,7 @@ c = 435
 </details>
 
 <details>
-<summary><strong>▼ Problem 2</strong></summary>
+<summary><strong>2a</strong></summary>
 
 ### a)
 
