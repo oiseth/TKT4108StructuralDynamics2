@@ -19,6 +19,14 @@ c = 435
 
 </details>
 
+
+
+<details>
+<summary><strong>1b</strong></summary>
+9.18 rad/s
+</details>
+
+
 <details>
 <summary><strong>2a</strong></summary>
 
@@ -32,7 +40,6 @@ $$
 0 & 0 & 2 & 4
 \end{bmatrix}
 $$
-
 
 </details>
 
