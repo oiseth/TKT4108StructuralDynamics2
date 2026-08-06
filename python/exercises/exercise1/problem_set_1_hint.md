@@ -96,7 +96,7 @@ c = 435
 
 ### a)
 
-$$
+$\displaystyle
 \mathbf{K}=
 \frac{EI}{L}
 \begin{bmatrix}
@@ -105,7 +105,8 @@ $$
 0 & 1 & 7 & 2\\
 0 & 0 & 2 & 4
 \end{bmatrix}
-$$
+$
+
 
 ### b)
 
