@@ -22,7 +22,7 @@ c = 435
 <details>
 <summary><strong>2a</strong></summary>
 
-### a)
+###
 
 $$
 \mathbf{K}=
