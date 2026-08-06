@@ -1,28 +1,23 @@
 # Hints
 
-<details>
-<summary><strong> Problem 1</strong></summary>
+## Exercise Set
 
 <details>
-<summary>b)</summary>
+<summary><strong>▼ Problem 1</strong></summary>
+
+### b)
 
 ```text
 9.18 rad/s
 ```
 
-</details>
-
-<details>
-<summary>c)</summary>
+### c)
 
 ```text
 c = 435
 ```
 
-</details>
-
-<details>
-<summary>d)</summary>
+### d)
 
 ```text
 0.031 m
@@ -30,15 +25,12 @@ c = 435
 
 </details>
 
-</details>
-
 <details>
-<summary><strong> Problem 2</strong></summary>
+<summary><strong>▼ Problem 2</strong></summary>
 
-<details>
-<summary>a)</summary>
+### a)
 
-$
+$$
 \mathbf{K}=
 \frac{EI}{L}
 \begin{bmatrix}
@@ -47,29 +39,22 @@ $
 0 & 1 & 7 & 2\\
 0 & 0 & 2 & 4
 \end{bmatrix}
-$
+$$
 
-</details>
+### b)
 
-<details>
-<summary>b)</summary>
-
+```text
 17.90 rad/s
+```
 
-</details>
+### c)
 
-<details>
-<summary>c)</summary>
+$$
+\alpha = 4.47\times10^{-1}
+$$
 
-$\alpha = 4.47\times10^{-1}$
-
-</details>
-
-<details>
-<summary>e)</summary>
+### e)
 
 Element shape functions
-
-</details>
 
 </details>
