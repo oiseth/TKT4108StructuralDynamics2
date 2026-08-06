@@ -119,6 +119,9 @@ $$
 \alpha = 4.47\times10^{-1}
 $$
 
+$\displaystyle \alpha = 4.47\times10^{-1}$
+
+
 ### e)
 
 Element shape functions
