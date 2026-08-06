@@ -103,6 +103,23 @@ $$
 \end{bmatrix}
 $$
 
+
+### b)
+
+```text
+17.90 rad/s
+```
+
+### c)
+
+$$
+\alpha = 4.47\times10^{-1}
+$$
+
+### e)
+
+Element shape functions
+
 </details>
 
 
