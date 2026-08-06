@@ -123,6 +123,17 @@ $$
 
 Element shape functions
 
+```math
+\mathbf{K}=
+\frac{EI}{L}
+\begin{bmatrix}
+4 & 2 & 0 & 0\\
+2 & 7 & 1 & 0\\
+0 & 1 & 7 & 2\\
+0 & 0 & 2 & 4
+\end{bmatrix}
+```
+
 </details>
 
 
