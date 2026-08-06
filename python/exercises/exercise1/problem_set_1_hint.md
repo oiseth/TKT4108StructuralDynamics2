@@ -126,7 +126,7 @@ $\displaystyle \alpha = 4.47\times10^{-1}$
 
 Element shape functions
 
-```math
+$\displaystyle
 \mathbf{K}=
 \frac{EI}{L}
 \begin{bmatrix}
@@ -135,7 +135,8 @@ Element shape functions
 0 & 1 & 7 & 2\\
 0 & 0 & 2 & 4
 \end{bmatrix}
-```
+$
+
 
 </details>
 
