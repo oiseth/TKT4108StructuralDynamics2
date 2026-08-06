@@ -1,33 +1,34 @@
 # Hints
 
-## Problem 1
+## Exercise Set
 
 <details>
-<summary>b)</summary>
+<summary><strong>▼ Problem 1</strong></summary>
 
-$9.18\,\mathrm{rad/s}$
+### b)
+
+```text
+9.18 rad/s
+```
+
+### c)
+
+```text
+c = 435
+```
+
+### d)
+
+```text
+0.031 m
+```
 
 </details>
 
 <details>
-<summary>c)</summary>
+<summary><strong>▼ Problem 2</strong></summary>
 
-$c=435$
-
-</details>
-
-<details>
-<summary>d)</summary>
-
-$0.031\,\mathrm{m}$
-
-</details>
-
-
-## Problem 2
-
-<details>
-<summary>a)</summary>
+### a)
 
 $$
 \mathbf{K}=
@@ -40,24 +41,19 @@ $$
 \end{bmatrix}
 $$
 
-</details>
+### b)
 
-<details>
-<summary>b)</summary>
+```text
+17.90 rad/s
+```
 
-$17.90\,\mathrm{rad/s}$
+### c)
 
-</details>
+$$
+\alpha = 4.47\times10^{-1}
+$$
 
-<details>
-<summary>c)</summary>
-
-$\alpha=4.47\times10^{-1}$
-
-</details>
-
-<details>
-<summary>e)</summary>
+### e)
 
 Element shape functions
 
