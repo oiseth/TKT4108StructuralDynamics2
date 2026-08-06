@@ -19,7 +19,7 @@ c = 435
 <details>
 <summary><strong>2a</strong></summary>
 
-$
+$$
 \mathbf{K}=
 \frac{EI}{L}
 \begin{bmatrix}
@@ -28,7 +28,7 @@ $
 0 & 1 & 7 & 2\\
 0 & 0 & 2 & 4
 \end{bmatrix}
-$
+$$
 </details>
 
 
