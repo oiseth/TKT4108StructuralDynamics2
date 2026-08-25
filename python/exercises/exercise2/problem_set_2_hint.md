@@ -20,16 +20,7 @@ $$
 <details>
 <summary><strong>1c</strong></summary>
 Modal load vector is
-$$\begin{bmatrix} X_1 + 1.618X_2 \\ X_1 - 0.618X_2 \end{bmatrix}$$.
-  
-  $$
-\mathbf{K}=k
-\begin{bmatrix}
-4 & -2\\
--2 & 2
-\end{bmatrix}
-$$
-  
+$$\begin{bmatrix} X_1 + 1.618X_2 \\ X_1 - 0.618X_2 \end{bmatrix}$$.  
 </details>
 
 <details>
