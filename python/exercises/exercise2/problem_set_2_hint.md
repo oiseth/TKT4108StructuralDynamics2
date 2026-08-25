@@ -20,7 +20,7 @@ $$
 <details>
 <summary><strong>1c</strong></summary>
 Modal load vector is
-$\left[ \begin{array}{c} X_1 + 1.618X_2 \\ X_1 - 0.618X_2 \end{array} \right]$.
+$$\left[ \begin{array}{c} X_1 + 1.618X_2 \\ X_1 - 0.618X_2 \end{array} \right]$$.
 </details>
 
 <details>
