@@ -44,7 +44,7 @@ c = 435
 </details>
 
 <details>
-<summary><strong>2c</strong></summary>
+<summary><strong>2b</strong></summary>
 
 ```math
 17.90\,\mathrm{rad/s}
