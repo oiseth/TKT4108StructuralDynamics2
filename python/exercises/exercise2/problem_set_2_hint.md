@@ -24,7 +24,7 @@ Modal load vector is
 
 $$
 \begin{bmatrix}
-X_1 + 1.618X_2 \\
+X_1 + 1.618X_2\\
 X_1 - 0.618X_2
 \end{bmatrix}
 $$
