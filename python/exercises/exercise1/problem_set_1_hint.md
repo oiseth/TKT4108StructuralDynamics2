@@ -2,51 +2,68 @@
 
 <details>
 <summary><strong>1b</strong></summary>
-9.18 rad/s
+
+```math
+9.18\,\mathrm{rad/s}
+```
+
 </details>
 
 <details>
 <summary><strong>1c</strong></summary>
+
+```math
 c = 435
-</details>
+```
 
+</details>
 
 <details>
 <summary><strong>1c</strong></summary>
-0.031 m
+
+```math
+0.031\,\mathrm{m}
+```
+
 </details>
 
 <details>
 <summary><strong>2a</strong></summary>
 
-$$
+```math
 \mathbf{K}=
 \frac{EI}{L}
 \begin{bmatrix}
-4 & 2 & 0 & 0\\
-2 & 7 & 1 & 0\\
-0 & 1 & 7 & 2\\
+4 & 2 & 0 & 0 \\
+2 & 7 & 1 & 0 \\
+0 & 1 & 7 & 2 \\
 0 & 0 & 2 & 4
 \end{bmatrix}
-$$
+```
+
 </details>
-
-
 
 <details>
 <summary><strong>2b</strong></summary>
- $17.90\,\mathrm{rad/s}$
+
+```math
+17.90\,\mathrm{rad/s}
+```
+
 </details>
 
 <details>
 <summary><strong>2c</strong></summary>
-    $\alpha = 4.47\,\mathrm{e}{-1}$
+
+```math
+\alpha = 4.47\times 10^{-1}
+```
+
 </details>
 
 <details>
 <summary><strong>2e</strong></summary>
-    Element shape functions
+
+Element shape functions
+
 </details>
-
-
-
