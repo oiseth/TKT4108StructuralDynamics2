@@ -28,7 +28,11 @@ Use `matplotlib.pyplot.hist(x)`.
 <details>
 <summary><strong>3b</strong></summary>
 
-Use the expected value, $E[\sigma_P]=E[\dots]$.
+Use the expected value,
+
+```math
+E[\sigma_P]=E[\dots].
+```
 
 </details>
 
@@ -69,7 +73,23 @@ Use a simulation technique from the posted examples.
 <details>
 <summary><strong>5b</strong></summary>
 
-The simulated estimates vary between realizations. Check that $\sigma_x$ is reasonably close to the specified value of $20$ and report the corresponding $\sigma_y$.
+The simulated estimates vary between realizations. Check that
+
+```math
+\sigma_x
+```
+
+is reasonably close to the specified value of
+
+```math
+20
+```
+
+and report the corresponding
+
+```math
+\sigma_y.
+```
 
 </details>
 

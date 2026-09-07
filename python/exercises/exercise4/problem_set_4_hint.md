@@ -22,7 +22,7 @@ Consider symmetry and whether the quantities are real or complex.
 Consider the relation to the time domain and
 
 ```math
-\operatorname{cov}(x_1,x_2)=\int_{-\infty}^{\infty} S_{x_1x_2}(\omega)\,\mathrm{d}\omega.
+\text{cov}(x_1,x_2)=\int_{-\infty}^{\infty} S_{x_1x_2}(\omega)\,\mathrm{d}\omega.
 ```
 
 </details>

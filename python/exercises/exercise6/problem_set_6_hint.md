@@ -24,7 +24,7 @@ f_1=7.29\,\mathrm{Hz},\qquad f_2=24.18\,\mathrm{Hz},\qquad f_3=32.94\,\mathrm{Hz
 The standard deviation of the vertical displacement is approximately
 
 ```math
-\operatorname{SD}[z_{11}]\approx 0.5\,\mathrm{mm}.
+\text{SD}[z_{11}]\approx 0.5\,\mathrm{mm}.
 ```
 
 </details>
@@ -35,7 +35,7 @@ The standard deviation of the vertical displacement is approximately
 From the frequency-domain calculation,
 
 ```math
-\operatorname{SD}[z_{11}]\approx 0.68\,\mathrm{mm}.
+\text{SD}[z_{11}]\approx 0.68\,\mathrm{mm}.
 ```
 
 </details>
@@ -46,7 +46,7 @@ From the frequency-domain calculation,
 From the frequency-domain calculation,
 
 ```math
-\operatorname{SD}[N_{20}]\approx 1.43\,\mathrm{kN}.
+\text{SD}[N_{20}]\approx 1.43\,\mathrm{kN}.
 ```
 
 </details>
@@ -64,7 +64,7 @@ k\approx 35530\,\mathrm{N/m}
 <summary><strong>2b</strong></summary>
 
 ```math
-\operatorname{Var}[Q]\approx590\,\mathrm{N^2}
+\text{Var}[Q]\approx590\,\mathrm{N^2}
 ```
 
 </details>

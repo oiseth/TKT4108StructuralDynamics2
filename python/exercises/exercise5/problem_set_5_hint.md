@@ -3,7 +3,11 @@
 <details>
 <summary><strong>2b</strong></summary>
 
-The time step must resolve both the structural response and the highest load frequency. A suitable value is $\Delta t=0.02\,\mathrm{s}$.
+The time step must resolve both the structural response and the highest load frequency. A suitable value is
+
+```math
+\Delta t=0.02\,\mathrm{s}.
+```
 
 ```math
 \sigma_y \approx 3.94\times10^{-2}
@@ -43,14 +47,24 @@ The time step must resolve both the structural response and the highest load fre
 \sigma_{y_3}\approx0.476
 ```
 
-The displacement correlations are high; representative values are approximately $0.8$--$0.9$.
+The displacement correlations are high; representative values are approximately
+
+```math
+0.8\text{--}0.9.
+```
 
 </details>
 
 <details>
 <summary><strong>4a</strong></summary>
 
-Use the definition of $R_y(\tau)$ and differentiate with respect to the two time arguments.
+Use the definition of
+
+```math
+R_y(\tau)
+```
+
+and differentiate with respect to the two time arguments.
 
 </details>
 
