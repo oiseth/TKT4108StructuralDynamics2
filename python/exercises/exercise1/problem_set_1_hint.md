@@ -56,7 +56,7 @@ c = 435
 <summary><strong>2c</strong></summary>
 
 ```math
-\alpha = 4.47\times 10^{-1}
+\alpha_1 = 4.47\times 10^{-1}
 ```
 
 </details>
