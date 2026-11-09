@@ -26,7 +26,7 @@ The weekly [exercises and solutions ](https://github.com/oiseth/TKT4108Structura
 
 [Exercise 9](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise9/problem_set_9.ipynb) ([solution](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise9/solution_problem_set9.ipynb)) - deadline Oct 29th
 
-[Exercise 10](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise10/problem_set_10.ipynb) - deadline Nov 5th
+[Exercise 10](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise10/problem_set_10.ipynb) ([solution](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise10/solution_problem_set_10.ipynb)) - deadline Nov 5th
 
 [Exercise 11](https://github.com/oiseth/TKT4108StructuralDynamics2/blob/main/python/exercises/exercise11/problem_set_11.ipynb) - deadline Nov 12th
 
